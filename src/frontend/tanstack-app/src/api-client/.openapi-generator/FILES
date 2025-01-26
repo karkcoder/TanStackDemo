@@ -1,9 +1,7 @@
-.gitignore
-.npmignore
 .openapi-generator-ignore
-api.ts
-base.ts
-common.ts
-configuration.ts
-git_push.sh
+apis/InsuranceMembersApi.ts
+apis/index.ts
 index.ts
+models/InsuranceMember.ts
+models/index.ts
+runtime.ts
