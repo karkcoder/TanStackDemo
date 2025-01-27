@@ -19,7 +19,7 @@ namespace TestApp.Controllers
 		[HttpGet]
 		public async Task<ActionResult<IEnumerable<InsuranceMember>>> GetInsuranceMembers()
 		{
-			return await _context.InsuranceMembers.ToListAsync();
+			return await _context.InsuranceMembers.Take(100).ToListAsync();
 		}
 
 		// GET: api/InsuranceMembers/5

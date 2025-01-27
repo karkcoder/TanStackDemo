@@ -56,6 +56,6 @@ npm install -g @openapitools/openapi-generator-cli
 
 npm install -g @openapitools/openapi-generator-cli
 
-openapi-generator-cli generate -i http://localhost:5215/swagger/v1/swagger.json -g typescript-axios -o ./api-client
+openapi-generator-cli generate -i http://localhost:5215/swagger/v1/swagger.json -g typescript-fetch -o ./api-client
 
 http://localhost:5215/swagger/v1/swagger.json

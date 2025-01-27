@@ -3,18 +3,18 @@ import {
   createRoute,
   createRouter,
 } from "@tanstack/react-router";
-//import UsersList from "../features/users/UsersList";
 import InsuranceMemberDetails from "../features/insurance-members/MemberDetails";
+import MemberLists from "../features/insurance-members/MemberLists";
 
 // Create a root route
 const rootRoute = createRootRoute();
 
-// Create individual routes
-// const indexRoute = createRoute({
-//   getParentRoute: () => rootRoute,
-//   path: "/",
-//   component: UsersList,
-// });
+//Create individual routes
+const indexRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/",
+  component: MemberLists,
+});
 
 const usersRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -29,7 +29,7 @@ const userDetailsRoute = createRoute({
 
 // Create the route tree
 const routeTree = rootRoute.addChildren([
-  //indexRoute,
+  indexRoute,
   usersRoute.addChildren([userDetailsRoute]),
 ]);
 

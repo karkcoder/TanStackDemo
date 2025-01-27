@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@progress/kendo-react-data-tools": "^9.3.1",
+    "@progress/kendo-react-grid": "^9.3.1",
+    "@progress/kendo-theme-default": "^10.1.0",
     "@tanstack/react-query": "^5.64.2",
     "@tanstack/react-router": "^1.97.14",
     "axios": "^1.7.9",
