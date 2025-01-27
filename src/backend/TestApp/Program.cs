@@ -22,6 +22,15 @@ namespace TestApp
 				});
 			});
 
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy("AllowSpecificOrigin",
+					builder => builder
+						.WithOrigins("http://localhost:5173") // Allow your frontend URL
+						.AllowAnyHeader()
+						.AllowAnyMethod());
+			});
+
 			// Add DbContext with SQL Server
 			builder.Services.AddDbContext<InsuranceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -33,6 +42,8 @@ namespace TestApp
 				app.UseSwagger();
 				app.UseSwaggerUI();
 			}
+
+			app.UseCors("AllowSpecificOrigin");
 
 			app.UseHttpsRedirection();
 			app.UseAuthorization();
